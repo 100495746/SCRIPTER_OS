@@ -1,0 +1,2 @@
+## Script de SSOO
+ls -l

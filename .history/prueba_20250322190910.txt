@@ -1,0 +1,4 @@
+## Script de SSOO
+ls -l
+cat fich | grep word
+cat fich > fich2 &
