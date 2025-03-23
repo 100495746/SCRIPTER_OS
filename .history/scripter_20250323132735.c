@@ -140,17 +140,16 @@ int main(int argc, char *argv[1]) {
                     fprintf(stderr, "Error: first line is invalid");
                     break;
                 }
-                first = 0;
             }
-            
-            else{
-                procesar_linea(line);
-            }
-            i=0;
+
+            procesar_linea(line);
+            i = 0;
         }
         else{
             line[i++]=c;
         }
+
+
     }
     fclose(f);
 

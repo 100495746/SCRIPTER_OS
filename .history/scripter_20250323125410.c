@@ -110,49 +110,8 @@ int procesar_linea(char *linea) {
 int main(int argc, char *argv[1]) {
 
     /* STUDENTS CODE MUST BE HERE */
-    if (argc!=2){
-        perror("Incorrect number of arguments. Must be: ./scripter <file to read>");
-        return -1;
-    }
+    if (argc!=2)
 
-    FILE *f = fopen(argv[1], O_RDONLY);
-    if (!f){
-        perror("File does not exist");
-        return -1;
-    }
-
-    char line[max_line];
-    int i=0; // contador de linea
-    int c=0;
-    int first=1;
-    while(c != EOF){
-        c = fgetc(f);
-        if (c== '\n'|| i==max_line-1){
-            line[i]='/0';
-
-            if (strlen(line)==0){
-                fprintf(stderr, "Error: empty line");
-                break;
-            }
-
-            if (first ==1){
-                if (strcmp(line, "## Script de SSOO")!=0){
-                    fprintf(stderr, "Error: first line is invalid");
-                    break;
-                }
-                first = 0;
-            }
-            
-            else{
-                procesar_linea(line);
-            }
-            i=0;
-        }
-        else{
-            line[i++]=c;
-        }
-    }
-    fclose(f);
 
 
 

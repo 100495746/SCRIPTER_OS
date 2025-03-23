@@ -130,29 +130,27 @@ int main(int argc, char *argv[1]) {
         if (c== '\n'|| i==max_line-1){
             line[i]='/0';
 
-            if (strlen(line)==0){
+            if (strlen(linea)==0){
                 fprintf(stderr, "Error: empty line");
                 break;
             }
 
             if (first ==1){
-                if (strcmp(line, "## Script de SSOO")!=0){
+                if (strcmp(linea, "## Script de SSOO")!=0){
                     fprintf(stderr, "Error: first line is invalid");
                     break;
                 }
-                first = 0;
             }
-            
-            else{
-                procesar_linea(line);
-            }
+
+            procesar_linea(line)
             i=0;
         }
         else{
-            line[i++]=c;
+            linea[i++]=c;
         }
+
+
     }
-    fclose(f);
 
 
 

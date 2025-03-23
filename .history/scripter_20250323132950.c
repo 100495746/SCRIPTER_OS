@@ -151,6 +151,7 @@ int main(int argc, char *argv[1]) {
         else{
             line[i++]=c;
         }
+
     }
     fclose(f);
 

@@ -142,15 +142,16 @@ int main(int argc, char *argv[1]) {
                 }
                 first = 0;
             }
-            
-            else{
-                procesar_linea(line);
-            }
-            i=0;
+            else
+
+            procesar_linea(line);
+            i = 0;
         }
         else{
             line[i++]=c;
         }
+
+
     }
     fclose(f);
 

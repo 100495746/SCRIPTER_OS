@@ -121,38 +121,26 @@ int main(int argc, char *argv[1]) {
         return -1;
     }
 
-    char line[max_line];
+    char linea[max_line];
     int i=0; // contador de linea
     int c=0;
     int first=1;
     while(c != EOF){
         c = fgetc(f);
         if (c== '\n'|| i==max_line-1){
-            line[i]='/0';
-
-            if (strlen(line)==0){
-                fprintf(stderr, "Error: empty line");
-                break;
-            }
+            linea[i]='/0';
 
             if (first ==1){
-                if (strcmp(line, "## Script de SSOO")!=0){
-                    fprintf(stderr, "Error: first line is invalid");
-                    break;
+                if (strcmp(linea, "## Script de SSOO")!=0){
+                    fprintf(stderr, "Error: ll")
+
                 }
-                first = 0;
+
             }
-            
-            else{
-                procesar_linea(line);
-            }
-            i=0;
+
         }
-        else{
-            line[i++]=c;
-        }
+
     }
-    fclose(f);
 
 
 

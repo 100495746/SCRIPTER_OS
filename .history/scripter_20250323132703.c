@@ -136,23 +136,21 @@ int main(int argc, char *argv[1]) {
             }
 
             if (first ==1){
-                if (strcmp(line, "## Script de SSOO")!=0){
+                if (strcmp(linea, "## Script de SSOO")!=0){
                     fprintf(stderr, "Error: first line is invalid");
                     break;
                 }
-                first = 0;
             }
-            
-            else{
-                procesar_linea(line);
-            }
+
+            procesar_linea(line)
             i=0;
         }
         else{
-            line[i++]=c;
+            linea[i++]=c;
         }
+
+
     }
-    fclose(f);
 
 
 
