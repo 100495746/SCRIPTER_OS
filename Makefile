@@ -6,9 +6,9 @@ CFLAGS=-I.
 
 # MODIFIED ME ##
 
-OBJ = scripter.o 
+OBJ = scripter.o mygrep.o
 
-all: scripter
+all: scripter mygrep
 
 %.o: %.c 
 	$(CC) $(FLAGS) -c -o $@ $< $(CFLAGS)
@@ -16,5 +16,8 @@ all: scripter
 scripter: $(OBJ)
 	$(CC) $(FLAGS) -L. -o $@ $< $(LIBS)
 
+mygrep: $(OBJ)
+	$(CC) $(FLAGS) -L. -o $@ $< $(LIBS)
+	
 clean:
-	rm -f ./scripter.o ./scripter
+	rm -f ./scripter.o ./scripter ./mygrep.o ./mygrep
