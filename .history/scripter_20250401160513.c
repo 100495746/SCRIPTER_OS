@@ -106,62 +106,13 @@ int procesar_linea(char *linea) {
 
 
     }
-    if(num_comandos==1){
-        execute_simple_comand(argvv, filev, background);
-    }
 
     return num_comandos;
 }
 
 
 
-void execute_simple_comand(char *argvv[], char *filev[], int background){
-    int pid;
-    if ((pid = fork()) < 0) {
-        perror("Fork error");
-        return;
-    }
-    if (pid!=0){
-        if(background==0){
-            wait(NULL);
-            return;
-        }
-        else{
-            ???
-        }
-        
-    }
-    
-    if (filev[0]!=NULL){
-        int fd;
-        if((fd=open(filev[0], O_RDONLY))<0){
-            perror("open error");
-        };
-        dup2(fd, 0);
-        close(fd);
-    }
-    if (filev[1]!= NULL){
-        int fd;
-        if((fd=open(filev[1], O_WRONLY|O_CREAT|O_TRUNC))<0){
-            perror("open error");
-        };
-        dup2(fd, 1);
-        close(fd);
-    }
-    if (filev[2]!=NULL){
-        int fd; 
-        if((fd=open(filev[2], O_RDONLY))<0){
-            perror("open error");
-        };
-        dup2(fd, 2);
-        close(fd);
-    }
-
-    if((execvp(argvv[0], argvv))<0){
-        perror("Error executing");
-    };
-
-}
+void execute_simple_comand(char argvv)
 
 int main(int argc, char *argv[1]) {
 

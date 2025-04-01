@@ -142,7 +142,7 @@ void execute_simple_comand(char *argvv[], char *filev[], int background){
     }
     if (filev[1]!= NULL){
         int fd;
-        if((fd=open(filev[1], O_WRONLY|O_CREAT|O_TRUNC))<0){
+        if((fd=open(filev[0], O_RDONLY))<0){
             perror("open error");
         };
         dup2(fd, 1);
@@ -150,16 +150,16 @@ void execute_simple_comand(char *argvv[], char *filev[], int background){
     }
     if (filev[2]!=NULL){
         int fd; 
-        if((fd=open(filev[2], O_RDONLY))<0){
+        if((fd=open(filev[0], O_RDONLY))<0){
             perror("open error");
         };
         dup2(fd, 2);
         close(fd);
     }
+    execvp(argvv[0], argvv);
 
-    if((execvp(argvv[0], argvv))<0){
-        perror("Error executing");
-    };
+
+
 
 }
 
