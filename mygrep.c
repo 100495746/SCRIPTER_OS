@@ -30,8 +30,8 @@ int main(int argc, char ** argv) {
 	//Main function
 	while (fgets(buffer,strlen(argv[2]) + 1,file)){
 		if (strstr(buffer, string)) {//Current line = given line
-			printf("%s\n",buffer)
-			occurrence++
+			printf("%s",buffer);
+			occurrence = occurrence++;
 		}
 	}
 	if (ocurrence == 0) {//No line was concatenated after reading the file
