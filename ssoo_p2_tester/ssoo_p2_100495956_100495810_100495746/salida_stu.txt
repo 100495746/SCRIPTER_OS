@@ -4,27 +4,21 @@ file.txt
 file.txt
 foo.txt
 mygrep
-"ssoo,os"
-file
-file
+#include <stdlib.h>
+lib not found.
+[background execution]
+a
+
+
+
+
+a
+
+bfdbbfdddd  file.txt
+.
+..
 file.txt
 file.txt
 file.txt
 file.txt
-cardillo y kiwi
-kiwi not found.
-     foo.txt
- foo.txt
-total 
-drwxr-xr-x.  raulas raulas     abr   : dir
--rwxr-xr-x.  raulas raulas      abr   : file.txt
--rwxr-xr-x.  raulas raulas      abr   : file.txt
--rwxr-xr-x.  raulas raulas      abr   : file.txt
--rwxr-xr-x.  raulas raulas     abr   : foo.txt
--rwxr-xr-x.  raulas raulas  abr   : mygrep
-dir
-file.txt
-file.txt
-file.txt
-foo.txt
-mygrep
+[background execution]

@@ -1,0 +1,9 @@
+a.txt
+dir1
+error1-medium-scripter.err
+file1.txt
+file2.txt
+file3.txt
+foo.txt
+mygrep
+mygrep1-medium-scripter.out
