@@ -1,0 +1,3 @@
+
+ 
+●  autores.txt: Text file in CSV format, with one author per line. The format is:  NIA, Surname, First name 

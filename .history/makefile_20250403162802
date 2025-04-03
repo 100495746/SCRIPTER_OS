@@ -1,0 +1,24 @@
+# NIA de los autores
+NIA1 = 100495956
+NIA2 = 100495810
+NIA3 = 100495746
+
+ZIP = ssoo_p2_$(NIA1)_$(NIA2)_$(NIA3).zip
+FILES = scripter.c mygrep.c Makefile autores.txt
+TESTER_DIR = ../ssoo_p2_tester
+TESTER = $(TESTER_DIR)/tester.sh
+
+# Crear el zip
+zip:
+	zip -r $(ZIP) $(FILES)
+
+# Ejecutar test 1
+test1: zip
+	cp $(ZIP) $(TESTER_DIR)
+	cd $(TESTER_DIR) && ./tester.sh $(ZIP) 1
+
+# Ejecutar test 2
+test2: zip
+	cp $(ZIP) $(TESTER_DIR)
+	cd $(TESTER_DIR) && ./tester.sh $(ZIP) 2
+

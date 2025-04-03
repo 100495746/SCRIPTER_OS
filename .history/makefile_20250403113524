@@ -1,0 +1,18 @@
+# === TESTER RULES ===
+NIA1 = 100495956
+NIA2 = 100495810
+NIA3 = 100495746
+
+ZIP = ssoo_p2_$(NIA1)_$(NIA2)_$(NIA3).zip
+FILES = scripter.c mygrep.c Makefile autores.txt
+TESTER = ../ssoo_p2_tester/tester.sh
+
+
+zip:
+	zip -r $(ZIP) $(FILES)
+
+test1: zip
+	$(TESTER) $(ZIP) 1
+
+test2: zip
+	$(TESTER) $(ZIP) 2

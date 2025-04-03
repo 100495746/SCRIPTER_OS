@@ -1,0 +1,33 @@
+
+
+ AULA  GLOBAL,  one  submission  link  will  be  enabled  for  the  code  and  another 
+TURNITIN link for the report. A single member of the group must submit it. 
+ 
+4.3  Files to be submitted 
+A compressed file in ZIP format must be submitted with the name: 
+ssoo_p2_NIA1_NIA2_NIA3.zip 
+With the NIAs of the members of the group. In case of doing the laboratory alone, the 
+format will be: ssoo_p2_NIA1.zip. The file must contain: 
+●  scripter.c: Main file of the command interpreter.  
+●  autores.txt: Text file in CSV format, with one author per line. The format is:  NIA, Surname, First name 
+●  mygrep.c: Main file of the requested external command.  
+●  Makefile:  Makefile  modified  by  the  student  to  compile  the  external  program 
+mygrep. 
+6 
+ 
+ 
+  Computer Science and Engineering Department 
+Operating System (2024-2025) 
+Laboratory 2 - Scripter 
+ 
+ 
+Important: deletion/modification of "CC", "FLAGS", "CFLAGS" variables is not allowed in 
+the Makefile. 
+ 
+The report file must be delivered to the TURNITIN link with the name: 
+ssoo_p2_NIA1_NIA2_NIA3.pdf 
+The report shall contain at least the following sections: 
+●  Cover page: with authors' full names, NIAs, and e-mail addresses. 
+●  Index 
+●  Description  of  the  code:  detailing  the  main  functions  implemented.  Do  NOT 
+include source code from the lab in this secti
