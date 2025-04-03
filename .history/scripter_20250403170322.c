@@ -20,7 +20,7 @@ int background = 0;
 void sigchld_handler(int sig) {
     while (waitpid(-1, NULL, WNOHANG) > 0);
 }
-//compact
+
 
 int tokenizar_linea(char *linea, char *delim, char *tokens[], int max_tokens) {
     int i = 0;
