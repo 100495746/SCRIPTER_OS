@@ -150,11 +150,6 @@ void execute_pipes(char *cmds[], int num_cmds, int background){
             int pipes[2];
             pipe(pipes);
         }
-        int pid = fork();
-        if(pid==0){
-            dup2(old_pipe_read, 0); //stdin to oldpipe
-            dup2(pipes[1], 1);
-        }
         
 
 

@@ -134,29 +134,8 @@ int procesar_linea(char *linea) {
 
 
 void execute_pipes(char *cmds[], int num_cmds, int background){
-    char *argv_total[max_commands][max_args]; // each line is a command, each column, an arg
     for (int i=0; i<num_cmds; i++){
-
-        tokenizar_linea(cmds[i], " \t\n", argv_total[i], max_args);
-
-        /*(Opcional pero útil) Llamas a procesar_redirecciones(argv_total[i])
-         para ese comando si quieres gestionar <, >, !> en el primer/último.*/
-    }
-
-    int old_pipe_read = -1;
-    //stdin -> [comando1] -> pipe1 -> [comando2] -> pipe2 -> [comando3] -> stdout
-    for (int i =0; i<num_cmds; i++){
-        if(i!=num_cmds-1){
-            int pipes[2];
-            pipe(pipes);
-        }
-        int pid = fork();
-        if(pid==0){
-            dup2(old_pipe_read, 0); //stdin to oldpipe
-            dup2(pipes[1], 1);
-        }
-        
-
+        tokenizar_linea()
 
     }
 

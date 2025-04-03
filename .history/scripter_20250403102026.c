@@ -143,22 +143,7 @@ void execute_pipes(char *cmds[], int num_cmds, int background){
          para ese comando si quieres gestionar <, >, !> en el primer/último.*/
     }
 
-    int old_pipe_read = -1;
-    //stdin -> [comando1] -> pipe1 -> [comando2] -> pipe2 -> [comando3] -> stdout
-    for (int i =0; i<num_cmds; i++){
-        if(i!=num_cmds-1){
-            int pipes[2];
-            pipe(pipes);
-        }
-        int pid = fork();
-        if(pid==0){
-            dup2(old_pipe_read, 0); //stdin to oldpipe
-            dup2(pipes[1], 1);
-        }
-        
-
-
-    }
+    for (int i =0; i<)
 
 }
 
